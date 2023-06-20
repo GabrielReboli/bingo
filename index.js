@@ -39,13 +39,13 @@ function exibirCartelas() {
         cartelaContainer.appendChild(nomeJogador);
 
         var numerosTable = document.createElement('table');
-        for (var j = 0; j < 5; j++) {
+        for (var k = 0; k < 5; k++) { // Inverter o loop das colunas
             var row = document.createElement('tr');
-            for (var k = 0; k < 5; k++) {
+            for (var j = 0; j < 5; j++) { // Inverter o loop das linhas
                 var cell = document.createElement('td');
                 var numero = document.createElement('div');
                 numero.classList.add('numero');
-                numero.textContent = cartela.numeros[j * 5 + k];
+                numero.textContent = cartela.numeros[j * 5 + k]; // Inverter o cálculo do índice
                 cell.appendChild(numero);
                 row.appendChild(cell);
             }
